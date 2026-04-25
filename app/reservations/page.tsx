@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
@@ -78,10 +79,13 @@ export default function ReservationsPage() {
       <main className="flex-1 pt-20">
         <section className="relative h-[45vh] min-h-[350px]">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=1920&h=1080&fit=crop"
+            <Image
+              src="/images/reservation-hero.jpg"
               alt="Elegant dining"
-              className="w-full h-full object-cover"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
