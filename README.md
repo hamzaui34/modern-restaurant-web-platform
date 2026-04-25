@@ -2,7 +2,13 @@
 
 A modern, luxurious restaurant management platform built with Next.js 16, featuring a stunning UI, staff management system, online ordering, and reservations.
 
-![Royal Ember](https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop)
+![Royal Ember Preview](public/images/reservation-hero.jpg)
+
+## Live Demo
+
+**Live Site:** [https://royal-ember.vercel.app](https://royal-ember.vercel.app)
+
+---
 
 ## Features
 
@@ -27,31 +33,63 @@ A modern, luxurious restaurant management platform built with Next.js 16, featur
 - **Menu Management** - Enable/disable menu items
 - **Analytics** - Revenue, orders, and conversion tracking
 
+---
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 16.2.4 (App Router) |
+| **UI Library** | React 19.2.4 |
+| **Styling** | Tailwind CSS 4 |
+| **Animations** | Framer Motion 12 |
+| **Language** | TypeScript 5 |
+| **Storage** | localStorage (no backend required) |
+| **Deployment** | Vercel-ready |
+
+---
+
+## Screenshots
+
+### Home Page
+![Home Page](public/screenshots/home.png)
+
+### Menu
+![Menu](public/screenshots/menu.png)
+
+### Reservations
+![Reservations](public/screenshots/reservations.png)
+
+### Staff Dashboard
+![Staff Dashboard](public/screenshots/staff-dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](public/screenshots/admin-dashboard.png)
+
+> **Note:** Screenshots should be added to `public/screenshots/` directory before use.
+
+---
+
 ## Demo Credentials
 
 ### Staff Portal (Recommended)
-- **Email:** admin@royalember.com
-- **Password:** admin123
-- **Role:** Manager
-
-Other staff accounts:
 | Email | Password | Role |
 |-------|----------|------|
+| admin@royalember.com | admin123 | Manager |
 | chef@royalember.com | chef123 | Chef |
 | sarah@royalember.com | sarah123 | Waiter |
 | mohammad@royalember.com | mohammad123 | Bartender |
 | fatima@royalember.com | fatima123 | Host |
 
-## Tech Stack
-
-- **Framework:** Next.js 16.2.4 (App Router)
-- **UI:** React 19, Tailwind CSS 4
-- **Animations:** Framer Motion
-- **Language:** TypeScript
-- **Storage:** localStorage (no backend required)
-- **Deployment:** Vercel-ready
+---
 
 ## Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 1. Clone the repository:
 ```bash
@@ -71,62 +109,78 @@ npm run dev
 
 4. Open [http://localhost:3001](http://localhost:3001) in your browser
 
+---
+
 ## Project Structure
 
 ```
-app/
-├── page.tsx              # Home/landing page
-├── menu/page.tsx         # Menu with categories
-├── reservations/page.tsx # Reservation booking
-├── cart/page.tsx         # Shopping cart
-├── checkout/page.tsx     # Checkout flow
-├── order-confirmation/   # Order success
-├── about/page.tsx       # About page
-├── contact/page.tsx      # Contact form
-└── staff/               # Staff portal
-    ├── login/           # Staff login
-    ├── dashboard/        # Staff dashboard
-    ├── admin/            # Staff management
-    └── profile/          # Staff profile
-
-components/
-├── layout/               # Header, Footer, Nav
-├── home/                 # Home sections
-├── menu/                 # Menu components
-├── ui/                   # Reusable UI components
-└── staff/                # Staff system components
+royal-ember-restaurant/
+├── app/                        # Next.js App Router pages
+│   ├── page.tsx              # Home/landing page
+│   ├── menu/                 # Menu page
+│   ├── reservations/          # Reservation booking
+│   ├── cart/                # Shopping cart
+│   ├── checkout/            # Checkout flow
+│   ├── order-confirmation/   # Order success page
+│   ├── about/               # About page
+│   ├── contact/             # Contact form
+│   └── staff/               # Staff portal
+│       ├── login/           # Staff login
+│       ├── dashboard/        # Staff dashboard
+│       ├── admin/           # Staff management
+│       └── profile/         # Staff profile
+│
+├── components/               # React components
+│   ├── layout/             # Header, Footer, Nav
+│   ├── home/              # Home sections
+│   ├── menu/             # Menu components
+│   ├── ui/               # Reusable UI components
+│   └── staff/            # Staff system components
+│
+├── public/                # Static assets
+│   └── images/           # Hero images
+│
+├── lib/                   # Utilities
+├── package.json
+└── next.config.ts
 ```
 
-## Deployment to Vercel
+---
+
+## Deployment
+
+### Deploy to Vercel
 
 1. Push to GitHub:
 ```bash
 git add .
 git commit -m "Royal Ember - Premium Restaurant Platform v1.0"
-git branch -M main
-git remote add origin https://github.com/hamzaui34/modern-restaurant-web-platform.git
 git push -u origin main
 ```
 
 2. Connect to Vercel:
    - Go to [vercel.com](https://vercel.com)
-   - Import the GitHub repository
-   - Vercel will auto-detect Next.js configuration
-   - Deploy!
+   - Click "Import Project"
+   - Select your GitHub repository
+   - Vercel auto-detects Next.js configuration
+   - Click "Deploy"
+
+---
 
 ## Customization
 
 ### Changing Restaurant Details
-Edit these files:
 - `components/layout/Footer.tsx` - Contact info, hours
 - `app/about/page.tsx` - About content
 - `components/home/HeroSection.tsx` - Hero banner
 
 ### Modifying Menu Items
-Edit `app/menu/page.tsx` - Add, remove, or modify menu items in `MENU_ITEMS` array
+Edit `app/menu/page.tsx` - Modify items in `MENU_ITEMS` array
 
 ### Adding New Staff
-Use the Staff Admin panel at `/staff/admin` or add to `staffTypes.ts`
+Use the Staff Admin panel at `/staff/admin`
+
+---
 
 ## License
 
